@@ -1,5 +1,5 @@
-$back: #FFF;
-$text:  #1C1C1C;
+// $back: #FFF;
+// $text:  #1C1C1C;
 
 
 
@@ -34,7 +34,7 @@ $text:  #1C1C1C;
     }
 }
 @mixin md {
-    @media (min-width: 768px) {
+    @media (min-width: 820px) {
         @content;
     }
 }
@@ -44,13 +44,13 @@ $text:  #1C1C1C;
     }
 }
 @mixin xl {
-    @media (min-width: 1240px) {
+    @media (min-width: 1120px) {
         @content;
     }
 }
-@mixin xxl {
-    @media (min-width: 1600px) {
-        @content;
-    }
-}
+// @mixin xxl {
+//     @media (min-width: 1600px) {
+//         @content;
+//     }
+// }
 

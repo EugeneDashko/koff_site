@@ -1,0 +1,124 @@
+.header {
+    padding: 16px 0;
+    border-bottom: 1px solid #EEEFF2;
+
+    &__container {
+        display: grid;
+        gap: 16px;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-areas:
+        'logo control'
+        'search search';
+
+        @include md {
+            grid-template-areas:
+            'logo search control';
+            grid-template-columns: 94px 1fr auto;
+            align-items: center;
+        }
+    }
+
+    &__link-logo {
+        grid-area: logo;
+    }
+
+    &__logo {
+    }
+
+    &__search {
+        grid-area: search;
+        position: relative;
+
+        @include md {
+            width: 408px;
+            justify-self: center;
+
+            @include xl {
+                width: 514px;
+            }
+        }
+    }
+
+    &__input {
+
+        padding: 0 40px 0 24px;
+        height: 38px;
+        width: 100%;
+        border-radius: 32px;
+        background: #EEEFF2;
+        border: none;
+
+            &::placeholder {
+                color:  #969EAE;
+            }
+            &:focus-visible,
+            &:hover  {
+                outline: 1px solid #DFE3EB;
+            }
+
+
+    }
+
+    &__btn {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        right: 24px;
+        display: block;
+        border-radius: 4px;
+        outline-offset: 4px;
+        outline: 1px solid transparent;
+
+            &:hover,
+            &:active {
+                color:#780096;
+            }
+
+            &:focus-visible {
+                color: #780096;
+                outline-color: #780096;
+            }
+    }
+
+    &__control {
+        grid-area: control;
+        justify-self: end;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 4px;
+
+        &:hover,
+        &:active {
+            color:#780096;
+        }
+
+        &:focus-visible {
+            color: #780096;
+            outline-color: #780096;
+        }
+
+        @include sm {
+            flex-direction: row;
+        }
+    }
+
+    &__link-text {
+        display: none;
+            @include sm {
+                display: block;
+            }
+    }
+
+    &__count {
+    }
+}

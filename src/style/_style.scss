@@ -1,10 +1,7 @@
 
 
-
+// defalut styles
 html {
-  //плавный скролл по нажатию на якоря:
-  scroll-behavior: smooth;
-
   position: relative;
   box-sizing: border-box;
 }
@@ -16,22 +13,119 @@ html {
 }
 
 body {
+  position: relative;
+  overflow-x: hidden;
   min-width: 320px;
-  // min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 12px;
+  font-style: normal;
   line-height: 1.2;
-  background-color: $back;
-  color: $text
+  color: #1C1C1C;
+  background-color: #fff;
+  // display: flex;
+  // flex-direction: column;
 }
+
+main {
+  padding-bottom: 80px;
+  @include sm {
+    padding-bottom: 100px;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+
+/*
+Пример контейнера
+
+Если контейнер 1180px по макету,
+то для max-width прибавляем паддинги 30px*2, 
+в итоге 1240px
+Чтобы контент не прижимался к краям экрана
+*/
+
+// defalut styles
+
 
 .container {
   --width: 1256px;
-  --padding: 43px;
+  --padding: 16px;
   max-width: calc(var(--width) + var(--padding) * 2);
   margin: 0 auto;
   padding: 0 var(--padding);
 
+
+  @include sm {
+    padding: 0 29px;
+    @include md {
+      padding: 0 43px;
+    }
+    @include lg {
+      padding: 0 92px;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
 

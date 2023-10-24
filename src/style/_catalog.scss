@@ -1,0 +1,58 @@
+.catalog {
+    overflow-x: hidden;
+    padding-top: 24px;
+    @include sm {
+        padding-top: 32px;
+
+        @include md {
+            padding-top: 40px;
+        }
+    }
+
+    &__container {
+
+    }
+
+    &__list {
+        overflow-x: auto;
+        display: flex;
+        gap: 4px;
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        display: block;
+        padding: 11px 14px 13px;
+        border-radius: 32px;
+        background-color: #EEEFF2;
+        color:  #969EAE;
+
+        outline: none;
+        border: 1px solid transparent;
+
+
+            &:hover,
+            &:focus-visible {
+                border-color: #780096;
+                color: #780096;
+            };
+
+            &:active,
+            &_active {
+                color: #fff;
+                background-color: #780096;
+
+                &:hover,
+                &:focus-visible {
+                    color: #fff;
+                };
+            }
+
+            &_active {
+                pointer-events: none;
+            }
+    }
+}

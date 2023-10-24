@@ -1,0 +1,87 @@
+.card {
+    position: relative;
+
+    &__link {
+        &_img {
+            display: block;
+            margin-bottom: 12px;
+            @include md {
+                margin-bottom: 19px;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    &__info {
+        margin-bottom: 4px;
+        @include sm {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            @include md {
+                margin-bottom: 12px;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+    &__title {
+        font-size: 12px; 
+        font-weight: 400;
+
+        @include sm {
+            padding-top: 3px;
+            font-size: 16px;
+        }
+    }
+
+    &__price {
+        font-size: 16px;
+
+        @include sm {
+            font-size: 20px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 12px 24px;
+        border-radius: 32px;
+        border: 1px solid #780096;
+        color: #780096;
+
+        &:hover,
+        &:focus-visible {
+            border-color: #780096;
+            color: #780096;
+        };
+
+        &:active,
+        &_active {
+            color: #fff;
+            background-color: #780096;
+
+            &:hover,
+            &:focus-visible {
+                color: #fff;
+            };
+        }
+
+        &_active {
+            pointer-events: none;
+        }
+    }
+
+    &__favorite {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+}

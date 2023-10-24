@@ -8,7 +8,7 @@ import 'swiper/css';
 
 
 
-const swiper = new Swiper(".product__slider-thumbnails", {
+const swiperThumbnails = new Swiper(".product__slider-thumbnails", {
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
@@ -22,7 +22,7 @@ const swiper = new Swiper(".product__slider-thumbnails", {
     },
     modules: [Navigation, Thumbs],
     thumbs: {
-      swiper: swiper,
+      swiper: swiperThumbnails,
     },
   });
 

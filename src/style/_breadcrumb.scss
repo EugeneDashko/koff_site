@@ -1,33 +1,22 @@
-
 .breadcrumb {
-    padding-top: 24px;
-    @include lg {
-        padding-top: 20px;
+    padding-top: 20px;
+  
+    @include sm {
+      padding-top: 24px;
     }
-
-    &__container {
-    }
-
+  
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        color: #969EAE;
-
+      display: flex;
+      gap: 6px;
+      color: #969eae;
     }
-
+  
     &__item {
-        display: flex;
-        gap: 6px;
+      display: flex;
+      gap: 6px;
     }
-
+  
     &__item:last-child &__separator {
-        display: none;
+      display: none;
     }
-
-    &__link {
-    }
-
-    &__separator {
-    }
-}
+  }

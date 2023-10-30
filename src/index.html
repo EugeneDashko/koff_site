@@ -358,7 +358,7 @@
       </div>
     </section>
 
-    <section class="cart" hidden>
+    <section class="cart">
       <div class="container cart__container">
         <h2 class="cart__title">Корзина</h2>
 
@@ -367,7 +367,6 @@
           <li class="cart__product">
             <img src="img/photo.jpg" alt="" class="cart__img">
             <h3 class="cart__title-product">Кресло с подлокотниками</h3>
-
             <p class="cart__price">10&nbsp;000&nbsp;₽</p>
             <p class="cart__article">арт. 84348945757</p>
             <div class="cart__product-control">
@@ -380,7 +379,6 @@
           <li class="cart__product">
             <img src="img/photo.jpg" alt="" class="cart__img">
             <h3 class="cart__title-product">Кресло с подлокотниками</h3>
-
             <p class="cart__price">5&nbsp;000&nbsp;₽</p>
             <p class="cart__article">арт. 84348945757</p>
             <div class="cart__product-control">
@@ -393,7 +391,6 @@
           <li class="cart__product">
             <img src="img/photo.jpg" alt="" class="cart__img">
             <h3 class="cart__title-product">Кресло с подлокотниками</h3>
-
             <p class="cart__price">5&nbsp;000&nbsp;₽</p>
             <p class="cart__article">арт. 84348945757</p>
             <div class="cart__product-control">
@@ -402,7 +399,6 @@
               <button class="cart__product-btn">+</button>
             </div>
           </li>
-
         </ul>
 
         <div class="cart__place">
@@ -428,8 +424,8 @@
           <textarea class="form-order__textarea" name="comments" placeholder="Комментарий к заказу">Комментарий к заказу</textarea>
 
           </fieldset>
-            <fieldset class="form-order__fieldset orm-order__fieldset_radio">
-              <legend form="form-order__legend">Доставка</legend>
+            <fieldset class="form-order__fieldset form-order__fieldset_radio">
+              <legend class="form-order__legend">Доставка</legend>
               <label class="form-order__label radio">
                 <input type="radio" class="radio__input" name="deliveryType" value="delivery"> Доставка
               </label>
@@ -438,8 +434,8 @@
               </label>
             </fieldset>
           </fieldset>
-          <fieldset class="form-order__fieldsxxt orm-order__fieldset_radio">
-            <legend form="form-order__legend">Оплата</legend>
+          <fieldset class="form-order__fieldset form-order__fieldset_radio">
+            <legend class="form-order__legend">Оплата</legend>
             <label class="form-order__label radio">
               <input type="radio" class="radio__input" name="paymentType" value="card"> Картой при получении
             </label>
@@ -447,6 +443,7 @@
               <input type="radio" class="radio__input" name="paymentType" value="cash"> Наличными при получении
             </label>
           </fieldset>
+
         </form>
       </div>
 
